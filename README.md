@@ -1,2 +1,2 @@
-# sys-telemetry-cli
+# System telemetry client
 work in progress
