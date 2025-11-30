@@ -41,12 +41,12 @@ The project uses an object oriented design using an abstract base class to allow
 ### Terminal output
 The CLI provides feedback on the scan status
 
-```bash
+```powershell
 Starting Telemetry CLI
 --------------------
 System Report
-User name: "--"
-Computer name: "--"
+User name: "***"
+Computer name: "***"
 Debugger active: False
 System status: Safe
 --------------------
@@ -67,8 +67,8 @@ A structured file is generated for automated processing (SIEM simulation)
 {
     "time": "2025-11-30T20:41:30.296270",
     "system_report": {
-        "user": "--",
-        "computer": "--",
+        "user": "***",
+        "computer": "***",
         "is_debugger_active": false,
         "status": "Safe"
     },
