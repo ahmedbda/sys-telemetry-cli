@@ -1,4 +1,4 @@
-# Sys telemetry CLI 
+# System telemetry CLI 
 A Python & C++ hybrid security tool for local system auditing and EDR telemetry simulation
 
 ## Table of content
