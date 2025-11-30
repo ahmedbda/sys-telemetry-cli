@@ -50,8 +50,8 @@ class SystemProbe(Probe):
     def run(self):
         # complete report as a dictionnary, public function 
         return {
-            "module": "system_telemetry",
             "user": self._get_username(),
             "computer": self._get_computer_name(),
-            "is_debugger_active": self._is_debugger_present()
+            "is_debugger_active": self._is_debugger_present(),
+            "status": "Warning" if self._is_debugger_present() else "Safe"
         }

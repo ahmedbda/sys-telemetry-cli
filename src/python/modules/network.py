@@ -46,7 +46,6 @@ class NetworkProbe(Probe):
                 error_ports.append(status)
         
         return {
-            "module": "network_telemetry",
             "scanned_ports_count": len(self.ports),
             "open": open_ports if len(open_ports) > 0 else ["None"],
             "closed": closed_ports if len(closed_ports) > 0 else ["None"],
