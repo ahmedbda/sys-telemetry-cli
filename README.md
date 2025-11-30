@@ -43,20 +43,20 @@ The CLI provides feedback on the scan status
 
 ```yaml
 Starting Telemetry CLI
---------------------
+ㅤ--------------------
 System Report
 User name: "***"
 Computer name: "***"
 Debugger active: False
 System status: Safe
---------------------
+ㅤ--------------------
 Network Report
 Number of scanned ports: 5
 Open ports: ['None']
 Closed ports: [21, 80, 443, 22, 3389]
 Ports returning an error: ['None']
 Network status: Safe
---------------------
+ㅤ--------------------
 Report saved to: c:\Users\[***]\output\report.json
 Log sent to (SIEM simulation): c:\Users\[***]\logs\activity.log
 ```
@@ -96,7 +96,7 @@ A structured file is generated for automated processing in the output folder (SI
 A new line is added to the activity log file in the logs folder
 
 ```yaml
-[2025-11-30T20:41:30.296270] [Safe] Scan complete, ports open:ㅤ0, debugger:ㅤFalse
+[2025-11-30T20:41:30.296270] [Safe] Scan complete, ports open:ㅤ 0, debugger:ㅤ False
 ```
 
 ## How to run
