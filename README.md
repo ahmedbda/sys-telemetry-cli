@@ -19,50 +19,22 @@ This project explores cybersecurity centered programming and multi-language inte
 The goal is to simulate an EDR (endpoint detection and response) program
 
 ## Architecture
-The tool uses a modular architecture where Python allocates memory buffers and passes pointers to the C++ binary for execution
+The tool uses a modular architecture where Python allocates memory buffers and passes pointers to the C++ binary for execution  
 
-```mermaid
-graph TD
-    subgraph "Program"
-        Main[Python] -->|ctypes| DLL[C++]
-        Main -->|socket| Net[Network Scanner]
-        
-        DLL -->|windows.h| OS[Windows]
-        OS -->|Data| DLL
-    end
-
-    Main -->|Generate| Rpt[JSON Report]
-    Main -->|Generate| Log[SIEM Logs]
-```
+<p align="center"><img src="img/architecture.png"></p>  
 
 ### Why C++?
 While Python can access system info, using C++ allows for:
 * Stealth: Native windows.h calls are harder to spoof than high-level wrappers
 * Performance: Direct memory manipulation via pointers
 * Proof of Concept: Demonstrates how to handle buffers and memory allocation between high (Python) and low (C++) level languages
-
+<br>
 Using C++ also taught me how to interact with multiple languages in a single project
 
 ## Code structure
-The project uses an object oriented design using an abstract base class to allow easy scalability (adding new probes)
+The project uses an object oriented design using an abstract base class to allow easy scalability (adding new probes)  
 
-```mermaid
-classDiagram
-    class Probe {
-        <<Interface>>
-        +run()*
-    }
-    class SystemProbe {
-        +run()
-        -load_dll()
-    }
-    class NetworkProbe {
-        +run()
-        -check_socket()
-    }
-    Probe <|-- SystemProbe
-    Probe <|-- NetworkProbe
-```
+<p align="center"><img src="img/class.png"></p>  
 
 ## Results & output
 
@@ -130,7 +102,7 @@ A new line is added to the activity.log file
 ## How to run
 The project is pre-compiled for Windows systems (telemetry.dll in /bin)
 
-### Automatic execution
+### Easy execution
 Simply double-click the "run.bat" script at the root of the repository
 
 ### Manual execution
