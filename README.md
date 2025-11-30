@@ -1,11 +1,11 @@
 # Sys telemetry CLI 
-
-A Python/C++ hybrid security tool for local system auditing and EDR telemetry simulation
+A Python & C++ hybrid security tool for local system auditing and EDR telemetry simulation
 
 ## Table of content
 
 <details>
 <summary>Expand contents</summary>
+
 - [Project goal](#project-goal)
 - [Architecture](#architecture)
 - [Code structure](#code-structure)
@@ -27,21 +27,21 @@ The tool uses a modular architecture where Python allocates memory buffers and p
 While Python can access system info, using C++ allows for:
 * Stealth: Native windows.h calls are harder to spoof than high-level wrappers
 * Performance: Direct memory manipulation via pointers
-* Proof of Concept: Demonstrates how to handle buffers and memory allocation between high (Python) and low (C++) level languages
-<br>
+* Proof of concept: Demonstrates how to handle buffers and memory allocation between high-level (Python) and low-level (C++) languages   
+
 Using C++ also taught me how to interact with multiple languages in a single project
 
 ## Code structure
 The project uses an object oriented design using an abstract base class to allow easy scalability (adding new probes)  
 
-<p align="center"><img src="img/class.png"></p>  
+<p align="center"><img src="img/class.png" height=350></p>  
 
 ## Results & output
 
 ### Terminal output
 The CLI provides feedback on the scan status
 
-```
+```powershell
 Starting Telemetry CLI
 --------------------
 System Report
@@ -63,7 +63,7 @@ Log sent to (SIEM simulation): c:\Users\[...]\logs\activity.log
 
 ### JSON report 
 A structured file is generated for automated processing (SIEM simulation)
-```
+```json
 {
     "time": "2025-11-30T20:41:30.296270",
     "system_report": {
@@ -95,7 +95,7 @@ A structured file is generated for automated processing (SIEM simulation)
 ### Activity log
 A new line is added to the activity.log file
 
-```
+```log
 [2025-11-30T20:41:30.296270] [Safe] Scan complete, ports open: 0, debugger: False
 ```
 
