@@ -34,7 +34,7 @@ Using C++ also taught me how to interact with multiple languages in a single pro
 ## Code structure
 The project uses an object oriented design using an abstract base class to allow easy scalability (adding new probes)  
 
-<p align="center"><img src="img/class.png" height=450></p>  
+<p align="center"><img src="img/class.png" height=425></p>  
 
 ## Results & output
 
@@ -96,7 +96,7 @@ A structured file is generated for automated processing in the output folder (SI
 A new line is added to the activity log file in the logs folder
 
 ```yaml
-[2025-11-30T20:41:30.296270] [Safe] Scan complete, ports open: 0, debugger: False
+[2025-11-30T20:41:30.296270] [Safe] Scan complete, ports open:ㅤ0, debugger:ㅤFalse
 ```
 
 ## How to run
