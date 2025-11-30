@@ -61,7 +61,7 @@ if __name__ == "__main__":
     try:
         # 'w' for write, so we clear the entire file before writing the new report
         with open(output_file, 'w') as f:
-            json.dump(global_rep, f, indent=4) # using the json library to write in the file f 
+            json.dump(global_rep, f, indent=4) # using the json library to write in the file f and 4 for the indent (PEP8 standard)
         print(f"Report saved to: " + (output_file))
     except Exception as e:
         print("Failed to write report: " + str(e))
