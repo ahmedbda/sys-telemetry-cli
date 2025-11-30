@@ -41,7 +41,7 @@ The project uses an object oriented design using an abstract base class to allow
 ### Terminal output
 The CLI provides feedback on the scan status
 
-```powershell
+```yaml
 Starting Telemetry CLI
 --------------------
 System Report
